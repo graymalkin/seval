@@ -1,12 +1,12 @@
 # seval
 
-`seval` provides a meta-circular Python interpretter for user interaction. It is
+`seval` provides a meta-circular Python interpreter for user interaction. It is
 designed to safely evaluate python code without allowing calls to access the
 underlying operating system.
 
 This is done by evaluation of python expressions under a restricted environment.
-Various python libaries are forbidden, and access to private fields is
-prohibitted.
+Various python libraries are forbidden, and access to private fields is
+prohibited.
 
 ```
 >>> "".__repr__()
@@ -31,15 +31,19 @@ implementation installed from pip. `anyreadline` is a metapackage which installs
 a readline library appropriate for your operating system. The `gnureadline`
 package is incompatible with Windows.
 
-## Build
+## Build, test, install
 
-Building is simple using setuptools
+### Build
+Building is simple using setuptools. It is advisable to work in a virtualenv.
 
 ```shellsession
+$ virtualenv .
+$ . bin/activate
+# Install dependencies using pip
 $ python3 ./setup.py build
 ```
 
-## Test
+### Test
 
 Tests are in the `test/` directory. They're using the `unittest`
 library and don't currently cover much of seval.
@@ -47,3 +51,19 @@ library and don't currently cover much of seval.
 ```shellsession
 $ python3 ./setup.py test
 ```
+
+### Install
+
+Installation is also done with setuptools.
+
+```shellsession
+$ python3 ./setup.py test
+```
+
+This will put the following into a `bin/` directory
+
+ - basic_repl.py
+ - pt_repl.py
+ - readline_repl.py
+ 
+
