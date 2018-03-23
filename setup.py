@@ -38,8 +38,6 @@ setup(
         # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation',
-
-
     ],
 
     # What does your project relate to?
@@ -48,4 +46,19 @@ setup(
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['docs', 'tests']),
+
+    scripts=[
+        "./seval/repls/basic_repl.py",
+        "./seval/repls/pt_repl.py",
+        "./seval/repls/readline_repl.py",        
+    ],
+    
+    setup_requires=[
+        'pytest-runner',
+    ],
+
+    test_require=[
+        'pytest',
+        'seval',
+    ],
 )

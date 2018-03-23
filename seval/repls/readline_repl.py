@@ -3,9 +3,10 @@ import atexit
 import os
 import sys
 
-import global_env
 import readline
 
+import seval
+from seval import global_env
 from seval.seval import parse_string
 from seval.repls import readline_completer
 

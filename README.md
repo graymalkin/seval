@@ -31,3 +31,19 @@ implementation installed from pip. `anyreadline` is a metapackage which installs
 a readline library appropriate for your operating system. The `gnureadline`
 package is incompatible with Windows.
 
+## Build
+
+Building is simple using setuptools
+
+```shellsession
+$ python3 ./setup.py build
+```
+
+## Test
+
+Tests are in the `test/` directory. They're using the `unittest`
+library and don't currently cover much of seval.
+
+```shellsession
+$ python3 ./setup.py test
+```

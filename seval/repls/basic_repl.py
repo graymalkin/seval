@@ -1,8 +1,8 @@
 from seval.seval import parse_string
-from seval.globalenv import globalenv
+from seval import global_env
 
 def main():
-    env = globalenv
+    env = global_env.globalenv
 
     while True:
         x = input("> ")
